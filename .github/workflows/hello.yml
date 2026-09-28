@@ -8,14 +8,14 @@ jobs:
     steps:
       - name: Hello
         run: echo "Hello DevOps!"
-        
-name: Show Branch
-env:
-  BRANCH: ${{ github.ref_name }}
-run: |
-  echo "Branch: $BRANCH"
-name: Show Repository
-env:
-  REPO: ${{ github.repository }}
-run: |
-  echo "Repository: $REPO"
+      
+      - name: Show Branch
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          echo "Branch: $BRANCH"
+      - name: Show Repository
+        env:
+          REPO: ${{ github.repository }}
+        run: |
+          echo "Repository: $REPO"
